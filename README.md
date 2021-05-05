@@ -1,12 +1,12 @@
 # CocoEvalPlus
 
-A high-level encapsulation for evaluating detection on the Microsoft COCO dataset, which is based on pycocotools.cocoeval.
+A high-level encapsulation for evaluating detection on the Microsoft COCO dataset. It's based on pycocotools.cocoeval.
 ## Features
 
 1. confusion matrix
-2. every class metrics (ap ar)
+2. every category metrics (ap ar)
 3. summary metrics (map mar)
-4. visualize utils
+4. visualization utils
 
 ## Intuitive Results
 
