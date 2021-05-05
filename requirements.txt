@@ -1,0 +1,4 @@
+pycocotools
+numpy
+pandas
+matplotlib
