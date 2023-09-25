@@ -114,7 +114,8 @@ class COCOevalPlus:
                     confusion_matrix[gt[i]['category_id'] - 1][confusion_matrix.shape[1] - 1] += 1
 
             for i in range(len(d)):
-                if matches.shape[0] > 0 and matches[matches[:, 1] == i].shape[0] == 0:
+                # if matches.shape[0] > 0 and matches[matches[:, 1] == i].shape[0] == 0:  # 逻辑错误，当没有匹配项时，FN应该加1，原先判断条件会跳过
+                if matches.shape[0] == 0 or matches[matches[:, 1] == i].shape[0] == 0:
                     confusion_matrix[confusion_matrix.shape[0] - 1][dt[i]['category_id'] - 1] += 1
 
         return confusion_matrix
